@@ -126,7 +126,7 @@ for (let i = 0; i < marqueeElementsDisplayed; i++) {
 
 /*Pentru slider-stanga*/
 
-scrollTo = (element) => {
+scrollToElement = (element) => {
   window.scroll({
     behavior: "smooth",
     left: 0,
@@ -137,51 +137,83 @@ scrollTo = (element) => {
 };
 
 document.getElementById("point2").addEventListener("click", () => {
-  scrollTo(document.getElementById("offers"));
+  scrollToElement(document.getElementById("offers"));
 });
 
 document.getElementById("point3").addEventListener("click", () => {
-  scrollTo(document.getElementById("about"));
+  scrollToElement(document.getElementById("about"));
 });
 
 document.getElementById("point4").addEventListener("click", () => {
-  scrollTo(document.getElementById("service"));
+  scrollToElement(document.getElementById("service"));
+});
+
+document.getElementById("point5").addEventListener("click", () => {
+  scrollToElement(document.getElementById("portfolio"));
 });
 
 document.getElementById("point1.2").addEventListener("click", () => {
-  scrollTo(document.getElementById("intro"));
+  scrollToElement(document.getElementById("intro"));
 });
 
 document.getElementById("point3.2").addEventListener("click", () => {
-  scrollTo(document.getElementById("about"));
+  scrollToElement(document.getElementById("about"));
 });
 
 document.getElementById("point4.2").addEventListener("click", () => {
-  scrollTo(document.getElementById("service"));
+  scrollToElement(document.getElementById("service"));
+});
+
+document.getElementById("point5.2").addEventListener("click", () => {
+  scrollToElement(document.getElementById("portfolio"));
 });
 
 document.getElementById("point1.3").addEventListener("click", () => {
-  scrollTo(document.getElementById("intro"));
+  scrollToElement(document.getElementById("intro"));
 });
 
 document.getElementById("point2.3").addEventListener("click", () => {
-  scrollTo(document.getElementById("offers"));
+  scrollToElement(document.getElementById("offers"));
 });
 
 document.getElementById("point4.3").addEventListener("click", () => {
-  scrollTo(document.getElementById("service"));
+  scrollToElement(document.getElementById("service"));
+});
+
+document.getElementById("point5.3").addEventListener("click", () => {
+  scrollToElement(document.getElementById("portfolio"));
 });
 
 document.getElementById("point1.4").addEventListener("click", () => {
-  scrollTo(document.getElementById("intro"));
+  scrollToElement(document.getElementById("intro"));
 });
 
 document.getElementById("point2.4").addEventListener("click", () => {
-  scrollTo(document.getElementById("offers"));
+  scrollToElement(document.getElementById("offers"));
 });
 
 document.getElementById("point3.4").addEventListener("click", () => {
-  scrollTo(document.getElementById("about"));
+  scrollToElement(document.getElementById("about"));
+});
+
+document.getElementById("point5.4").addEventListener("click", () => {
+  scrollToElement(document.getElementById("portfolio"));
+});
+
+document.getElementById("point1.5").addEventListener("click", () => {
+  scrollToElement(document.getElementById("intro"));
+});
+
+document.getElementById("point2.5").addEventListener("click", () => {
+  scrollToElement(document.getElementById("offers"));
+});
+
+document.getElementById("point3.5").addEventListener("click", () => {
+  scrollToElement(document.getElementById("about"));
+});
+
+document.getElementById("point4.5").addEventListener("click", () => {
+  scrollToElement(document.getElementById("service"));
 });
 
 /*Pentru miscare categorii*/
@@ -251,3 +283,76 @@ function closeAll() {
     cardActv.classList.remove("Card--active");
   }
 }
+
+/*Fixed nav-bar*/
+// When the user scrolls the page, execute myFunction
+window.onscroll = function () {
+  myFunction();
+};
+
+// Get the header
+var header = document.getElementById("header");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+    //document.body.style.paddingTop = header.offsetHeight + "px";
+  } else {
+    header.classList.remove("sticky");
+    document.body.style.paddingTop = 0;
+  }
+}
+
+/*Scroll to Top Button*/
+
+const btnScrollToTop = document.querySelector("#btnScrollToTop");
+
+btnScrollToTop.addEventListener("click", function () {
+  window.scrollTo(0, 0);
+});
+
+/*Animate On Load*/
+const images = document.querySelectorAll(".anim");
+observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.intersectionRatio > 0) {
+      entry.target.style.animation = `anim1 1.3s ${entry.target.dataset.delay} forwards ease-out`;
+    } else {
+      entry.target.style.animation = "none";
+    }
+  });
+});
+images.forEach((image) => {
+  observer.observe(image);
+});
+
+/*Burger Menu*/
+const navSlide = () => {
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".nav-links");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  burger.addEventListener("click", () => {
+    //ToggleNav
+    nav.classList.toggle("nav-active");
+
+    //Animate Links
+    navLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${
+          index / 7 + 0.7
+        }s`;
+      }
+    });
+    //Burger animation
+    burger.classList.toggle("toggle");
+  });
+};
+
+navSlide();
