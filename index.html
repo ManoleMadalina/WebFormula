@@ -21,16 +21,28 @@
     <title>WebFormula</title>
   </head>
   <body>
+    <div class="main">
     <!--Nav-bar-->
-    <header class="header">
+    <header class="header" id="header">
       <div class="navbar">
         <div class="nav-links">
+          <a href="#intro" class="nav-link">
+            <i class="fas fa-home"></i>
+          </a>
           <a href="#about" class="nav-link">DESPRE NOI</a>
           <a href="#service" class="nav-link">SERVICII</a>
-          <a href="#" class="nav-link">PROIECTE</a>
-          <a href="#" class="nav-link">FEEDBACK</a>
-          <a href="#" class="nav-link">CONTACT</a>
+          <a href="#portfolio" class="nav-link">PROIECTE</a>
+          <a href="#reviews" class="nav-link">FEEDBACK</a>
+          <a href="#contact" class="nav-link">CONTACT</a>
         </div>
+
+        <!--Burger-menu-->
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        
         <div class="socials">
           <a href="#" class="social-icon">
             <i class="fab fa-facebook-f"></i>
@@ -38,7 +50,7 @@
           <a href="#" class="social-icon">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="#" class="social-icon">
+          <a href="mailto: WebFormulaTeam@gmail.com" class="social-icon">
             <i class="fas fa-at"></i>
           </a>
         </div>
@@ -68,15 +80,15 @@
 
         <!--Title and slogan-->
         <div class="intro-content">
-          <div class="first-line">
+          <div class="first-line anim" data-delay="0s">
             <h1>Web</h1>
             <div class="intro-logo">
               <img src="Images1/LOGO.png" alt="logo WebFormula" />
             </div>
           </div>
-          <h1>Formula</h1>
-          <p class="intro-slogan1">Web Development. <span>Web Design.</span></p>
-          <p class="intro-slogan2">Noi stim formula potrivita site-ului tau.</p>
+          <h1 class="anim" data-delay="0s">Formula</h1>
+          <p class="intro-slogan1 anim" data-delay="0.4s">Web Development. <span>Web Design.</span></p>
+          <p class="intro-slogan2 anim" data-delay="0.8s">Noi stim formula potrivita site-ului tau.</p>
           <a href="#offers" class="intro-button">Detalii</a>
         </div>
         <!--/.intro-content-->
@@ -116,7 +128,7 @@
           <!--/.pages-->
           <div class="offers-main">
             <!--Offer1-->
-            <div class="offer">
+            <div class="offer anim" data-delay="0s">
               <div class="offer-image">
                 <img
                   class="offer-img"
@@ -136,7 +148,7 @@
             <!--/.offer1-->
 
             <!--Offer2-->
-            <div class="offer">
+            <div class="offer anim" data-delay="0s">
               <div class="offer-image">
                 <img
                   class="offer-img"
@@ -156,7 +168,7 @@
             <!--/.offer2-->
 
             <!--Offer3-->
-            <div class="offer">
+            <div class="offer anim" data-delay="0s">
               <div class="offer-image">
                 <img
                   class="offer-img"
@@ -176,7 +188,7 @@
             <!--/.offer3-->
 
             <!--Offer4-->
-            <div class="offer">
+            <div class="offer anim" data-delay="0s">
               <div class="offer-image">
                 <img
                   class="offer-img"
@@ -196,7 +208,7 @@
             <!--/.offer4-->
 
             <!--Offer5-->
-            <div class="offer">
+            <div class="offer anim" data-delay="0s">
               <div class="offer-image">
                 <img
                   class="offer-img"
@@ -262,7 +274,7 @@
                 carti de vizita, bannere, anunturi si altele.
               </p>
               
-              <a href="#" class="about-button">SERVICII</a>
+              <a href="#service" class="about-button">SERVICII</a>
             
             </div>
 
@@ -279,7 +291,7 @@
                 tineri, ambitiosi, responsabili si pregatiti pentru relizarea
                 celor mai interesante idei.
               </p>
-              <a href="#" class="about-button">CONTACT</a>
+              <a href="#contact" class="about-button">CONTACT</a>
             </div>
           </div>
           <!--/.about-text-->
@@ -311,6 +323,7 @@
 <section class="service" id="service">
   <div class="service-inner">
     <h2>S<span>E</span>RV<span>I</span>CI<span>I</span></h2>
+    <p class="service-select">Selectați o categorie:</p>
     <div class="service-content">
 
       <!--Slider-left-->
@@ -362,7 +375,7 @@
       <div class="service-deals">
 
         <!--Deal1(Landing Page)-->
-        <div class="service-deal">
+        <div class="service-deal anim" data-delay="0s">
           <p class="service-deal-title">Mobile App Design</p>
           <p class="service-price">De la 170$</p>
 
@@ -411,7 +424,7 @@
       <div class="service-deals active">
 
         <!--Deal1(Landing Page)-->
-        <div class="service-deal">
+        <div class="service-deal anim" data-delay="0s">
           <p class="service-deal-title">Landing page</p>
           <p class="service-price">De la 170$</p>
 
@@ -456,7 +469,7 @@
         </div><!--/.service-deal-->
 
         <!--Deal2(Multipage Website)-->
-        <div class="service-deal">
+        <div class="service-deal anim" data-delay="0.1s">
           <p class="service-deal-title">Multipage Website</p>
           <p class="service-price">De la 350$</p>
           <div class="service-colums">
@@ -507,7 +520,7 @@
 
 <!--GRAPHIC DESIGN-->
 <div class="service-deals">
-  <div class="graphic-design">
+  <div class="graphic-design anim" data-delay="0s">
 
     <!--Design Logo-->
     <div class="service-design">
@@ -570,7 +583,7 @@
 
 
 <!--PORTFOLIO-->
-<section class="portfolio">
+<section class="portfolio" id="portfolio">
   <div class="portfolio-inner">
     <h2>P<span>R</span>OI<span>E</span>CTE</h2>
 
@@ -580,11 +593,11 @@
       <div class="pages">
         <div class="line"></div>
         <div class="points">
-          <div class="point" id="point1.4"></div>
-          <div class="point" id="point2.4"></div>
-          <div class="point" id="point3.4"></div>
-          <div class="point point--active" id="point4.4"></div>
-          <div class="point" id="point5.4"></div>
+          <div class="point" id="point1.5"></div>
+          <div class="point" id="point2.5"></div>
+          <div class="point" id="point3.5"></div>
+          <div class="point" id="point4.5"></div>
+          <div class="point point--active" id="point5.5"></div>
         </div>
         <div class="line"></div>
       </div>
@@ -599,7 +612,7 @@
         <div class="Card-image" style="background-image: url(Images1/proiect1.png)"></div>
       </div>
       <div class="Card-title"><span><span><</span>APP DESIGN<span>/></span></span></div>
-      <div class="Card-explore"><span>Explore 50 more</span></div>
+      <div class="Card-explore"><span>Vezi proiecte</span></div>
       <button class="Card-button">Detalii</button></a><a class="Card" onClick="openGallery(2)" id="card-2">
       <div class="Card-thumb">
         <div class="Card-shadow"></div>
@@ -608,7 +621,7 @@
         <div class="Card-image" style="background-image: url(Images1/proiect2.png)"></div>
       </div>
       <div class="Card-title"><span><span><</span>WEB SITES<span>/></span></span></div>
-      <div class="Card-explore"><span>Explore 50 more</span></div>
+      <div class="Card-explore"><span>Vezi proiecte</span></div>
       <button class="Card-button">Detalii</button></a><a class="Card" onClick="openGallery(3)" id="card-3">
       <div class="Card-thumb">
         <div class="Card-shadow"></div>
@@ -617,7 +630,7 @@
         <div class="Card-image" style="background-image: url(Images1/proiect3.png)"></div>
       </div>
       <div class="Card-title"><span><span><</span>FLYERS & BANNERS<span>/></span></span></div>
-      <div class="Card-explore"><span>Explore 50 more</span></div>
+      <div class="Card-explore"><span>Vezi proiecte</span></div>
       <button class="Card-button">Detalii</button></a>
   </div>
   <div class="Grid-row"><a class="Card" onClick="openGallery(4)" id="card-4">
@@ -628,7 +641,7 @@
         <div class="Card-image" style="background-image: url(Images1/proiect4.png)"></div>
       </div>
       <div class="Card-title"><span><span><</span>LOGO&BUSINESS CARD<span>/></span></span></div>
-      <div class="Card-explore"><span>Explore 50 more</span></div>
+      <div class="Card-explore"><span>Vezi proiecte</span></div>
       <button class="Card-button">Detalii</button></a><a class="Card" onClick="openGallery(5)" id="card-5">
       <div class="Card-thumb">
         <div class="Card-shadow"></div>
@@ -637,7 +650,7 @@
         <div class="Card-image" style="background-image: url(Images1/proiect5.png)"></div>
       </div>
       <div class="Card-title"><span><span><</span>WEB DESIGN<span>/></span></span></div>
-      <div class="Card-explore"><span>Explore 50 more</span></div>
+      <div class="Card-explore"><span>Vezi proiecte</span></div>
       <button class="Card-button">Detalii</button></a>
       
       
@@ -649,7 +662,7 @@
 </section>
 
 <!--Reviews-->
-<section class="reviews">
+<section class="reviews" id="reviews">
  
   <div class='wrapper'>
     
@@ -707,12 +720,12 @@
 </section>
 
 <!--CONTACT-->
-<section class="contact">
+<section class="contact" id="contact">
   <div class="contact-inner">
     <form action="" class="contact-form">
       <h4>Contacteaza-ne</h4>
       <p class="contact-text">Completati acest formular, iar noi va contactam cat mai curand posibil</p>
-      <div class="contact-info">
+      <div class="contact-info anim" data-delay="0s">
         <p class="info-title">Info</p>
         <div class="info-item">
           <i class="fas fa-at"></i>
@@ -758,11 +771,12 @@
     </div><!--/.footer-column1-->
     <div class="footer-column2">
       <p class="footer-main">CONTACT INFO</p>
+      <a href="#" class="footer-menu">ACASĂ</a>
       <a href="#" class="footer-menu">DESPRE NOI</a>
       <a href="#" class="footer-menu">SERVICII</a>
       <a href="#" class="footer-menu">PROIECTE</a>
       <a href="#" class="footer-menu">CONTACT</a>
-      <a href="#" class="footer-menu">ACASĂ</a>
+      
     </div><!--/.footer-column2-->
     <div class="footer-column3">
       <div class="footer-socials1">
@@ -778,7 +792,7 @@
       </div><!--/.footer-socials1-->
       <div class="footer-socials2">
         <div class="footer-line">
-          <a href="#"><i class="fas fa-at"></i></a>
+          <a href="mailto: WebFormulaTeam@gmail.com"><i class="fas fa-at"></i></a>
           <p class="footer-info">webformulateam@gmail.com</p>
         </div>
         <div class="footer-line">
@@ -790,6 +804,10 @@
   </div><!--/.footer-inner-->
 </section>
 
+<!--Scroll To Top Button-->
+<button id="btnScrollToTop"><i class="fas fa-chevron-up"></i></button>
+
+</div><!--/.main-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js"></script>
