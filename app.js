@@ -1,5 +1,5 @@
 /*Pentru particule(stelute)*/
-particlesJS("particles-js", {
+/*particlesJS("particles-js", {
   particles: {
     number: {
       value: 355,
@@ -108,7 +108,7 @@ particlesJS("particles-js", {
     },
   },
   retina_detect: true,
-});
+});*/
 
 /*Animate On Load*/
 const images = document.querySelectorAll(".anim");
