@@ -174,7 +174,7 @@ const navSlide = () => {
 navSlide();
 
 /*Pentru carousel orizontal*/
-const root = document.documentElement;
+/*const root = document.documentElement;
 const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue(
   "--marquee-elements-displayed"
 );
@@ -184,7 +184,7 @@ root.style.setProperty("--marquee-elements", marqueeContent.children.length);
 
 for (let i = 0; i < marqueeElementsDisplayed; i++) {
   marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
-}
+}*/
 
 /*Pentru miscare categorii*/
 /*$(".service-category").click(function () {
