@@ -155,94 +155,23 @@ const navSlide = () => {
     //ToggleNav
     nav.classList.toggle("nav-active");
 
-    //Animate Links
+    //Nav-links
     navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = "";
-      } else {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${
-          index / 7 + 0.7
-        }s`;
-      }
+      link.addEventListener("click", () => {
+        nav.classList.remove("nav-active");
+        burger.classList.remove("toggle");
+      });
+      link.style.animation = `navLinkFade 0.5s ease forwards ${
+        index / 7 + 0.7
+      }s`;
     });
+
     //Burger animation
     burger.classList.toggle("toggle");
   });
 };
 
 navSlide();
-
-/*Pentru slider-stanga*/
-scrollToElement = (element) => {
-  window.scroll({
-    behavior: "smooth",
-    left: 0,
-    top: element.offsetTop,
-  });
-
-  console;
-};
-
-document.getElementById("point2").addEventListener("click", () => {
-  scrollToElement(document.getElementById("offers"));
-});
-document.getElementById("point3").addEventListener("click", () => {
-  scrollToElement(document.getElementById("about"));
-});
-document.getElementById("point4").addEventListener("click", () => {
-  scrollToElement(document.getElementById("service"));
-});
-document.getElementById("point5").addEventListener("click", () => {
-  scrollToElement(document.getElementById("portfolio"));
-});
-document.getElementById("point1.2").addEventListener("click", () => {
-  scrollToElement(document.getElementById("intro"));
-});
-document.getElementById("point3.2").addEventListener("click", () => {
-  scrollToElement(document.getElementById("about"));
-});
-document.getElementById("point4.2").addEventListener("click", () => {
-  scrollToElement(document.getElementById("service"));
-});
-document.getElementById("point5.2").addEventListener("click", () => {
-  scrollToElement(document.getElementById("portfolio"));
-});
-document.getElementById("point1.3").addEventListener("click", () => {
-  scrollToElement(document.getElementById("intro"));
-});
-document.getElementById("point2.3").addEventListener("click", () => {
-  scrollToElement(document.getElementById("offers"));
-});
-document.getElementById("point4.3").addEventListener("click", () => {
-  scrollToElement(document.getElementById("service"));
-});
-document.getElementById("point5.3").addEventListener("click", () => {
-  scrollToElement(document.getElementById("portfolio"));
-});
-document.getElementById("point1.4").addEventListener("click", () => {
-  scrollToElement(document.getElementById("intro"));
-});
-document.getElementById("point2.4").addEventListener("click", () => {
-  scrollToElement(document.getElementById("offers"));
-});
-document.getElementById("point3.4").addEventListener("click", () => {
-  scrollToElement(document.getElementById("about"));
-});
-document.getElementById("point5.4").addEventListener("click", () => {
-  scrollToElement(document.getElementById("portfolio"));
-});
-document.getElementById("point1.5").addEventListener("click", () => {
-  scrollToElement(document.getElementById("intro"));
-});
-document.getElementById("point2.5").addEventListener("click", () => {
-  scrollToElement(document.getElementById("offers"));
-});
-document.getElementById("point3.5").addEventListener("click", () => {
-  scrollToElement(document.getElementById("about"));
-});
-document.getElementById("point4.5").addEventListener("click", () => {
-  scrollToElement(document.getElementById("service"));
-});
 
 /*Pentru carousel orizontal*/
 const root = document.documentElement;
