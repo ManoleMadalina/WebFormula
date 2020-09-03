@@ -187,7 +187,7 @@ for (let i = 0; i < marqueeElementsDisplayed; i++) {
 }
 
 /*Pentru miscare categorii*/
-$(".service-category").click(function () {
+/*$(".service-category").click(function () {
   $(".service-categories").attr("planet-center", this.id);
   if (this.id == "category1") centerPlanet1();
   if (this.id == "category2") centerPlanet2();
@@ -217,7 +217,7 @@ function centerPlanet3() {
 
 $(function () {
   centerPlanet2();
-});
+});*/
 
 /*Pentru afisare servicii*/
 $(".service-category").click(function () {
