@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style0.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Istok+Web:ital@0;1&family=Montserrat:wght@300;400&display=swap"
       rel="stylesheet"
@@ -725,7 +725,7 @@
 <!--CONTACT-->
 <section class="contact" id="contact">
   <div class="contact-inner">
-    <form action="" class="contact-form">
+    <form class="contact-form" id="contact-form" method="post" action="contact-form.php">
       <h4>Contacteaza-ne</h4>
       <p class="contact-text">Completati acest formular, iar noi va contactam cat mai curand posibil</p>
       <div class="contact-info anim" data-delay="0s">
@@ -745,12 +745,12 @@
       </div>
       <div class="form-inputs">
       <label class="form-label" for="name">Nume complet</label></br>
-      <input id="name"  type="text" value="" placeholder=" " required></br>
+      <input id="name" name="name" type="text" class="form-control" required></br>
       <label class="form-label" for="phone">Telefon de contact</label></br>
-      <input id="phone" name="phone" type="text" value="" required></br>
+      <input id="phone" name="phone" type="text" class="form-control" required></br>
       <label class="form-label" for="message">Mesaj</label></br>
-      <textarea id="message" name="message" type="text" value="message" rows="4"></textarea></br>
-      <button class="contact-button">TRIMITE</button>
+      <textarea id="message" name="message" type="text" value="message" rows="4" class="form-control"></textarea></br>
+      <button class="form-control contact-button">TRIMITE</button>
     </div>
     <img class="contact-image" src="Images1/programmer.png" alt="website">
     </form>
@@ -799,22 +799,73 @@
           <p class="footer-info">webformulateam@gmail.com</p>
         </div>
         <div class="footer-line">
-          <a href="#"><i class="fas fa-phone"></i></a>
-          <p class="footer-info"><span>+373 690 04 957</span><span>+373 796 03 540</span></p>
+          <a href="tel:+373 690 04 957"><i class="fas fa-phone"></i></a>
+          <p class="footer-info"><span>+373 690 04 957/</span><span>+373 796 03 540</span></p>
         </div>
       </div><!--/.footer-socials2-->
     </div><!--/.footer-column3-->
   </div><!--/.footer-inner-->
 </section>
 
-<!--Scroll To Top Button-->
-<button id="btnScrollToTop"><i class="fas fa-chevron-up"></i></button>
+<!--Buton contacte-->
+<!--<nav>
+	<div class="toggle2">
+		<input type="checkbox">
+    <span class="btn"></span>
+    <ul>
+			<li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+			<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="#" target="_blank"><i class="fa fa-github"></i></a></li>
+			<li><a href="#" target="_blank"><i class="fa fa-codepen"></i></a></li>
+		</ul>
+	</div>
+</nav>-->
 
 </div><!--/.main-->
-<!--<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>-->
+<nav class="menu">
+  <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+  <label class="menu-open-button" for="menu-open">
+    <span class="hamburger hamburger-1"></span>
+    <span class="hamburger hamburger-2"></span>
+    <span class="hamburger hamburger-3"></span>
+  </label>
+  
+  <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
+  <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
+  <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
+  <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+  
+  
+</nav>
+
+
+<!-- filters -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="shadowed-goo">
+          
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+          <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+          <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+          <feComposite in2="shadow" in="goo" result="goo" />
+          <feComposite in2="goo" in="SourceGraphic" result="mix" />
+      </filter>
+      <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feComposite in2="goo" in="SourceGraphic" result="mix" />
+      </filter>
+    </defs>
+</svg>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js"></script>
-<script src="app.js"></script>  
+<script src="app0.js"></script>  
   </body>
 </html>
