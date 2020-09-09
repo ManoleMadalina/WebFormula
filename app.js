@@ -1,5 +1,5 @@
 /*Pentru particule(stelute)*/
-/*particlesJS("particles-js", {
+particlesJS("particles-js", {
   particles: {
     number: {
       value: 355,
@@ -108,7 +108,7 @@
     },
   },
   retina_detect: true,
-});*/
+});
 
 /*Animate On Load*/
 const images = document.querySelectorAll(".anim");
@@ -174,7 +174,7 @@ const navSlide = () => {
 navSlide();
 
 /*Pentru carousel orizontal*/
-/*const root = document.documentElement;
+const root = document.documentElement;
 const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue(
   "--marquee-elements-displayed"
 );
@@ -184,7 +184,7 @@ root.style.setProperty("--marquee-elements", marqueeContent.children.length);
 
 for (let i = 0; i < marqueeElementsDisplayed; i++) {
   marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
-}*/
+}
 
 /*Pentru miscare categorii*/
 $(".service-category").click(function () {
@@ -230,10 +230,3 @@ $(".service-category").click(function () {
   $siblings.removeClass("active");
   $this.addClass("active");
 });
-
-/*Scroll to Top Button*/
-/*const btnScrollToTop = document.querySelector("#btnScrollToTop");
-
-btnScrollToTop.addEventListener("click", function () {
-  window.scrollTo(0, 0);
-});*/
